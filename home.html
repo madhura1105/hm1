@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mInds</title>
+    <style>
+        body {
+            font-family: Sen, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAF9F6;
+            text-align: center;
+            font-size: 25px;
+        }
+        header {
+            background-color: #FAF9F6;
+            padding: 10px;
+            font-size: 20px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Align items vertically */
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        button {
+            background-color: #C3BCF1;
+            color: #FAF9F6;
+            padding: 10px 20px;
+            margin: 10px;
+            border: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .right-aligned {
+        float: right; /* Align the image to the right */
+        margin-left: 50px; /* Add some spacing between text and image */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>  mInds</h1>
+        <nav>
+            <a href="home.html" style="font-size: 15px;">Home</a>
+            <a href="about.html" style="font-size: 15px;">About</a>
+            <a href="scoop.html" style="font-size: 15px;">Scoop</a>
+            <a href="sharing_circle.html" style="font-size: 15px;">Chat section</a>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="quote"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+        const quotes = [
+            "You are always worth protecting!!",
+            "It's time to change your approach!!",
+            "Don't judge yourswlf for wanting closeness!!",
+            "Don't say yes when you want to say no!!",
+            "Don't limit yourself to bouncing back. Get better!!",
+            "Think of a good reason!!",
+            "Don't treat people like stepping stones!!",
+            "It's okay if you can't explain  it!!",
+            "Remind yourself of what you're grateful for!!",
+            "Remember you always have freedom of choice!!",
+            "Show up for yourself!!"
+        ];
+
+        let currentQuoteIndex = 0;
+        const quoteElement = document.getElementById("quote");
+
+        function displayNextQuote() {
+            quoteElement.innerText = quotes[currentQuoteIndex];
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+        }
+
+        displayNextQuote();
+        setInterval(displayNextQuote, 3000);
+    </script>
+<br>
+<div class="section" id="scoop" style="text-align: left; margin-left: 15px;">
+    <h2 style="font-size: 15px;">Scoop Section</h2>
+    <p style="font-size: 15px;">This is story based section where the user will <br> be given situation based story.
+    </p>
+    <button onclick="location.href='#scoop'">Let's Go</button>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSneNTkYxHOBIdOAnwMbx6J8ga312nz7ozq2C63_uHGfg&s" alt="Chat Illustration" class="right-aligned" style="width: 150px;">
+</div>
+
+<div class="section" id="chat" style="text-align: left; margin-left: 15px;">
+    <h2 style="font-size: 15px;">Chat Section</h2>
+    <p style="font-size: 15px;">This is an anonymous section where user can have chat, <br>call & video chat with us.
+    </p>
+    <button onclick="location.href='#chat'">Let's Go</button>
+    <img src="https://assets-global.website-files.com/637610b6e8be873142dadb34/63e2300bfc264b2eefb4d03f_5-Essential-Live-Chat-Agent-Skills-Needed-For-Superior-Customer-Service-Experience%25E2%2580%25A9-1-1.png" alt="Chat Illustration" class="right-aligned" style="width: 150px;">
+</div>
+
+<div class="section" id="About" style="text-align: left; margin-left: 15px;">
+    <h2 style="font-size: 15px;">About Section</h2>
+    <p style="font-size: 15px;">A place where you can release your burdens and tap into<br> 
+        a bundle of suggestions, all within a compassionate and non-critical atmosphere.<br>
+        And our goal is to create a happy community with the help of a sharing circle.</p>
+    <button onclick="location.href='#scoop'">Let's Go</button>
+    <img src="https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/iStock_000039291924_Medium.jpg" alt="Chat Illustration" class="right-aligned" style="width: 150px;">
+</div>
+
+</body>
+</html>
